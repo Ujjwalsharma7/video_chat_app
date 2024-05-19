@@ -36,11 +36,11 @@ const MobileNav = () => {
               width={32}
               height={32}
               alt="yoom logo"
-              className="max-sm:size-10"
+              // className="max-sm:size-10"
             />
             <p className="text-[26px] font-extrabold text-white ">YOOM</p>
           </Link>
-          <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-auto">
+          <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
             <SheetClose asChild>
               <div className="flex h-full flex-col gap-6 pt-16 text-white">
                 {sidebarLinks.map((link) => {
