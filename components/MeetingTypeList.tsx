@@ -9,7 +9,7 @@ import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
 import Loader from "./Loader";
 import { Textarea } from "./ui/textarea";
-// import ReactDatePicker from "react-datepicker";
+import ReactDatePicker from "react-datepicker";
 import { useToast } from "./ui/use-toast";
 import { Input } from "./ui/input";
 
@@ -106,11 +106,11 @@ const MeetingTypeList = () => {
           handleClick={createMeeting}
         >
           <div className="flex flex-col gap-2.5">
-            <label className="text-base font-normal leading-[22.4px] text-sky-2">
+            <label className="text-base font-normal leading-[22.4px] text-white">
               Add a description
             </label>
             <Textarea
-              className="border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="border-none bg-dark-2 focus-visible:ring-0 focus-visible:ring-offset-0"
               onChange={(e) =>
                 setValues({ ...values, description: e.target.value })
               }
@@ -120,7 +120,7 @@ const MeetingTypeList = () => {
             <label className="text-base font-normal leading-[22.4px] text-sky-2">
               Select Date and Time
             </label>
-            {/* <ReactDatePicker
+            <ReactDatePicker
               selected={values.dateTime}
               onChange={(date) => setValues({ ...values, dateTime: date! })}
               showTimeSelect
@@ -128,8 +128,8 @@ const MeetingTypeList = () => {
               timeIntervals={15}
               timeCaption="time"
               dateFormat="MMMM d, yyyy h:mm aa"
-              className="w-full rounded bg-dark-3 p-2 focus:outline-none"
-            /> */}
+              className="w-full rounded bg-dark-2 p-2 focus:outline-none"
+            />
           </div>
         </MeetingModal>
       ) : (
